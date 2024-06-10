@@ -1,0 +1,86 @@
+#chart {
+  display: block;
+  width: 95%;
+  margin: auto;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modalPicture {
+  width: 90%;
+  height: 75%;
+  margin: auto;
+  background: radial-gradient(circle, rgb(154, 0, 0) 40%, #5a000b);
+  color: white;
+}
+
+.volver {
+  font-size: 15px;
+}
+
+ion-content,
+ion-row,
+ion-grid {
+  height: 100%;
+  background: radial-gradient(circle, rgb(154, 0, 0) 40%, #5a000b);
+}
+
+ion-toolbar,
+ion-header {
+  --background: radial-gradient(circle, rgb(154, 0, 0) 40%, #5a000b);
+}
+
+.color {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+}
+
+.color2 {
+  --color: #ffffff;
+  --background: radial-gradient(circle, rgb(154, 0, 0) 40%, #5a000b);
+  // --background-color: radial-gradient(circle, rgb(154, 0, 0) 40%, #5a000b);
+}
+
+.color3 {
+  --ion-color-primary: #000000;
+  --background: #ffffff;
+}
+
+.a {
+  font-family: Arial, sans-serif;
+}
+
+#titulo {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+}
+
+#btn_logout {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+}
+
+ion-fab {
+  margin-bottom: var(--ion-safe-area-bottom, 0);
+}
+
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.select {
+  outline: 5px solid var(--ion-color-primary);
+}

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title mode="ios" id="titulo">votaciones</ion-title>
+    <ion-buttons slot="start" class="a">
+      <ion-button (click)="back()" id="btn_logout">
+        <ion-icon name="chevron-back-outline" slot="start" class="a"></ion-icon>
+        <p class="volver">Volver</p>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content>
+  <ion-button color="dark" expand="block" size="large" (click)="openModal()">
+    Ver foto votada
+  </ion-button>
+  <highcharts-chart *ngIf="chartOptions" id="chart" title="Resultados de votaciones" [Highcharts]="highcharts"
+    [options]="chartOptions"></highcharts-chart>
+</ion-content> -->
+
+<ion-content class="color2">
+  <highcharts-chart *ngIf="chartOptions" id="chart" title="Resultados de votaciones" [Highcharts]="highcharts"
+    [options]="chartOptions"></highcharts-chart>
+</ion-content>
+
+<ion-footer>
+  <ion-button class="color2" expand="block" size="large" (click)="openModal()">
+    ¿Que foto votaste?
+  </ion-button>
+</ion-footer>
+
+<ion-modal #modal [isOpen]="isModalOpen" (didDismiss)="isModalOpen = false" [initialBreakpoint]="0.75"
+  [breakpoints]="[0.75]">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="modal.dismiss()" class="color">Cerrar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-img *ngIf="selectedPhoto; else noPhoto" class="modalPicture" [src]="selectedPhoto"></ion-img>
+      <ng-template #noPhoto>
+        <h3 class="modalPicture">No votaste nada.</h3>
+      </ng-template>
+    </ion-content>
+  </ng-template>
+</ion-modal>

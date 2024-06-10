@@ -1,0 +1,13 @@
+<ion-app>
+  <!-- Mostrar la pantalla de presentación mientras showSplashScreen sea verdadero -->
+  <ng-container *ngIf="showSplashScreen">
+    <div class="splash-screen">
+      <p class="animated-text">Mendoza Javier</p>
+      <!-- <img src="../../../assets/splash.png"> -->
+      <img class="rotate-bl" [src]="splashScreenImage" alt="Splash Screen" />
+      <p class="animated-text">A343-1</p>
+    </div>
+  </ng-container>
+  <!-- Mostrar el contenido principal de la aplicación cuando showSplashScreen sea falso -->
+  <ion-router-outlet *ngIf="!showSplashScreen"></ion-router-outlet>
+</ion-app>

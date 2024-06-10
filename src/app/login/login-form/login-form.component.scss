@@ -1,0 +1,246 @@
+ion-grid,
+ion-row {
+  height: 95%;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
+
+#body {
+  //background: radial-gradient(circle, #e74154 27%, rgba(0, 0, 0, 1) 55%);
+  background: radial-gradient(circle, rgb(154, 0, 0) 40%, #5a000b);
+  // background-color: #000000;
+  text-align: center;
+}
+
+.a {
+  background: radial-gradient(circle, rgb(154, 0, 0) 40%, #5a000b);
+}
+
+//es donde estan los botones y los imput
+#card-main-content {
+  background: radial-gradient(circle, rgb(154, 0, 0) 40%, #5a000b);
+  // background: radial-gradient(circle, rgb(255, 255, 255) 40%, #ffffff);
+  width: 100%;
+  border-radius: 100px;
+  height: 100%;
+
+  position: absolute;
+  /* Establece el posicionamiento absoluto */
+
+  left: 50%;
+  /* Alinea el elemento en el centro horizontalmente */
+  transform: translateX(-50%);
+  /* Centra el elemento horizontalmente */
+  //top: 10%; /* Establece la distancia del 10% desde la parte inferior */
+  top: 20%;
+}
+
+//es donde está el titulo
+#main-card-header {
+  font-family: Arial, sans-serif;
+  /* Cambié la fuente a Arial como primera opción y una fuente genérica sin serifa como respaldo */
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  /* Reduje ligeramente el tamaño de la fuente a 36px */
+  font-weight: 700;
+  /* Aumenté el peso de la fuente a 700 (bold) */
+  font-style: normal;
+  /* Eliminé el estilo oblicuo */
+  font-variant: normal;
+  /* Eliminé las versalitas */
+  font-size: 20px;
+  position: absolute;
+  /* Establece el posicionamiento absoluto */
+  top: 5%;
+  /* Establece la distancia del 10% desde la parte inferior */
+  left: 50%;
+  /* Alinea el elemento en el centro horizontalmente */
+  transform: translateX(-50%);
+  /* Centra el elemento horizontalmente */
+  //bottom: 10%;
+  margin-bottom: 10%;
+}
+
+#main-card-down {
+  font-family: Arial, sans-serif;
+  /* Cambié la fuente a Arial como primera opción y una fuente genérica sin serifa como respaldo */
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  /* Reduje ligeramente el tamaño de la fuente a 36px */
+  font-weight: 700;
+  /* Aumenté el peso de la fuente a 700 (bold) */
+  font-style: normal;
+  /* Eliminé el estilo oblicuo */
+  font-variant: normal;
+  /* Eliminé las versalitas */
+  font-size: 20px;
+  position: absolute;
+  /* Establece el posicionamiento absoluto */
+  //top: 1%;
+  /* Establece la distancia del 10% desde la parte inferior */
+  left: 50%;
+  /* Alinea el elemento en el centro horizontalmente */
+  transform: translateX(-50%);
+  /* Centra el elemento horizontalmente */
+  bottom: 20%;
+  //margin-top: 10%;
+}
+
+#mail,
+#password {
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-top: 25px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+//donde están solo los botones
+#grid-botones {
+  //margin-top: 10%;
+  //margin-bottom: 1%;
+  bottom: 1px;
+  width: 100%;
+  border-radius: 100px;
+  height: 100%;
+}
+
+// :host ion-button.ghost-round {
+//   --cursor: pointer;
+//   // --background: #e05263;
+//   --background: none;
+//   --border: 1px solid rgba(255, 255, 255, 0.65);
+//   --border-radius: 25px;
+//   --color: rgba(0, 0, 0, 0.65);
+//   --webkit-align-self: flex-end;
+//   --ms-flex-item-align: end;
+//   --align-self: flex-end;
+//   --font-size: 19px;
+//   --font-size: 1.2rem;
+//   --font-family: roboto;
+//   --font-weight: 300;
+//   --line-height: 2.5em;
+//   --margin-top: auto;
+//   --margin-bottom: 250px;
+//   --webkit-transition: all .2s ease;
+//   --transition: all .2s ease;
+// }
+:host ion-button,
+ion-fab-button.ghost-round {
+  --cursor: pointer;
+  // --background: none;
+  --background: rgb(255, 255, 255);
+  --border: 1px solid rgb(255, 255, 255);
+  --border-radius: 25px;
+  // --color: rgba(31, 15, 15, 0.65);
+  --color: rgb(0, 0, 0);
+  --webkit-align-self: flex-end;
+  --ms-flex-item-align: end;
+  --align-self: flex-end;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  text-transform: capitalize;
+  --font-weight: 300;
+  --line-height: 2.5em;
+  --margin-top: auto;
+  --margin-bottom: 2500px;
+  --webkit-transition: all .2s ease;
+  --transition: all .2s ease;
+  height: 50px;
+}
+
+:host ion-checkbox,
+ion-toggle.ghost-round {
+  --cursor: pointer;
+  // --background: none;
+  --background: rgb(255, 255, 255);
+  --border: 1px solid rgb(255, 255, 255);
+  --border-radius: 25px;
+  // --color: rgba(31, 15, 15, 0.65);
+  color: rgb(255, 255, 255);
+  --webkit-align-self: flex-end;
+  --ms-flex-item-align: end;
+  --align-self: flex-end;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  --font-weight: 300;
+  --line-height: 2.5em;
+  --margin-top: auto;
+  --margin-bottom: 2500px;
+  --webkit-transition: all .2s ease;
+  --transition: all .2s ease;
+  height: 50px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+#txtError {
+  margin-top: 15px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 3.5px;
+  font-size: 20px;
+}
+
+#txtSatisfaccion {
+  margin-top: 15px;
+  color: green;
+  margin-bottom: 3.5px;
+}
+
+
+/* Estilo para dispositivos pequeños (por ejemplo, teléfonos) */
+@media (max-width: 576px) {
+  #main-card-header {
+    font-size: 24px;
+    /* Reducir el tamaño del encabezado para pantallas pequeñas */
+  }
+
+  #grid-botones {
+    margin-top: 10px;
+    /* Reducir el margen superior para pantallas pequeñas */
+  }
+
+  #card-main-content {
+    padding: 10px;
+    /* Ajustar el relleno para pantallas pequeñas */
+  }
+}
+
+/* Estilo para dispositivos medianos (por ejemplo, tabletas) */
+@media (min-width: 577px) and (max-width: 992px) {
+  #main-card-header {
+    font-size: 30px;
+    /* Tamaño de fuente mediano para tabletas */
+  }
+
+  #grid-botones {
+    margin-top: 20px;
+    /* Margen superior mediano para tabletas */
+  }
+
+  #card-main-content {
+    padding: 20px;
+    /* Ajustar el relleno para tabletas */
+  }
+}
+
+/* Estilo para dispositivos grandes (por ejemplo, computadoras de escritorio) */
+@media (min-width: 993px) {
+  #main-card-header {
+    font-size: 36px;
+    /* Tamaño de fuente grande para computadoras de escritorio */
+  }
+
+  #grid-botones {
+    margin-top: 30px;
+    /* Margen superior grande para computadoras de escritorio */
+  }
+
+  #card-main-content {
+    padding: 30px;
+    /* Ajustar el relleno para computadoras de escritorio */
+  }
+}

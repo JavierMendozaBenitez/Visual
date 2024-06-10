@@ -1,0 +1,80 @@
+.rotate-bl {
+  -webkit-animation: rotate-bl 7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: rotate-bl 7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes rotate-bl {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  /* Asegúrate de que el splash screen esté inicialmente oculto */
+  animation: fadeIn 3s ease-in-out forwards;
+  /* Animación de entrada */
+}
+
+.splash-screen p.animated-text {
+  opacity: 1;
+  /* Asegúrate de que la opacidad inicial sea 1 */
+  z-index: 999;
+  /* Ajusta el z-index según sea necesario */
+  animation: moveIn 2s ease-in-out forwards;
+  /* Animación de entrada para el texto */
+  color: #FFFFFF;
+  /* Cambia el color del texto a blanco */
+}
+
+.splash-screen p.animated-text:nth-child(1) {
+  animation-delay: 0.1s;
+  /* Retrasar la animación del primer párrafo */
+}
+
+.splash-screen p.animated-text:nth-child(2) {
+  animation-delay: 3s;
+  /* Retrasar la animación del segundo párrafo */
+}
+
+.splash-screen img {
+  margin-bottom: 20px;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animación de entrada para el texto */
+@keyframes moveIn {
+  0% {
+    transform: translate(-100%, -100%) scale(0.5);
+    /* Inicialmente fuera de la pantalla y reducido */
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+    /* Se mueve hacia el centro y aumenta su tamaño */
+  }
+}

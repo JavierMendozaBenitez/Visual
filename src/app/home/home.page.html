@@ -1,20 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header class="a">
+  <ion-toolbar class="a">
+    <ion-buttons slot="start" class="a">
+      <ion-button id="btn_logout">
+        <ion-icon name="chevron-back-outline" slot="start" class="a"></ion-icon>
+        <p class="volver">Salir</p>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-grid class="h-100">
+    <ion-row class="ion-align-items-center h-100">
+      <ion-col size="12">
+        <ion-button routerLink="/cosas-lindas" size="large" expand="block" class="bigger ion-padding" id="nice">
+          Cosas Lindas
+        </ion-button>
+        <ion-button routerLink="/cosas-feas" size="large" expand="full" class="bigger2 ion-padding" id="ugly">
+          Cosas Feas
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
+<ion-alert Class="color3" trigger="btn_logout" header="¿Cerrar sesión?" [buttons]="logoutButtons"></ion-alert>

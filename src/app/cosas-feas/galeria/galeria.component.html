@@ -1,0 +1,85 @@
+<ion-header class="a">
+  <ion-toolbar class="a">
+    <ion-title mode="ios" id="titulo">cosas feas</ion-title>
+    <ion-buttons slot="start" class="a">
+      <ion-button (click)="back()" id="btn_logout">
+        <ion-icon name="chevron-back-outline" slot="start" class="a"></ion-icon>
+        <p class="volver">Volver</p>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- <ion-row *ngIf="photos && photos.length > 0; else noPhotos">
+      <ion-col size="6" *ngFor="let photo of photos; index as i">
+        <div [ngClass]="{'select': i === selectedIndex}" (click)="selectIndex(i)">
+          <ion-img [src]="photo.webViewPath"></ion-img>
+        </div>
+      </ion-col>
+    </ion-row> -->
+
+
+    <!-- <ion-row *ngIf="photos && photos.length > 0; else noPhotos">
+      <ion-col size="12" *ngFor="let photo of photos; index as i">
+        <ion-card [ngClass]="{'select': i === selectedIndex}" (click)="selectIndex(i)">
+          <ion-img [src]="photo.webViewPath"></ion-img>
+          <ion-card-header>
+            <ion-card-title>{{ getEmailFromPhotoName(photo.name) }}</ion-card-title>
+            <ion-card-subtitle>{{ getFormattedDate(photo.timestamp) }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button (click)="vote(i)">Votar</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row> -->
+
+    <ion-row *ngIf="photos && photos.length > 0; else noPhotos">
+      <ion-col size="12" *ngFor="let photo of photos; index as i">
+        <ion-card [ngClass]="{'select': i === selectedIndex}" (click)="selectIndex(i)">
+          <ion-img [src]="photo.webViewPath"></ion-img>
+          <ion-card-header>
+            <ion-card-title>{{ photo.name }}</ion-card-title>
+            <ion-card-subtitle>{{ getFormattedDate(photo.timestamp) }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button class="color2" (click)="selectIndex(i)">Votar</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+
+
+
+
+
+
+    <ng-template #noPhotos>
+      <ion-row id="container" class="ion-align-items-center ion-justify-content-center">
+        <ion-col>
+          <div>
+            <ion-text class="color">
+              No hay fotos.
+            </ion-text>
+          </div>
+          <ion-button (click)="takePhoto()" fill="clear" class="color">
+            Agrega una foto.
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ng-template>
+  </ion-grid>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center">
+    <ion-fab-button (click)="takePhoto()" class="color2">
+      <ion-icon name="camera-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-alert [isOpen]="showToast" header="¿Votar?" message="" [buttons]="alertButtons" class="color3">
+  </ion-alert>
+</ion-content>

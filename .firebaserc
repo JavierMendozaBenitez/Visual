@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "miproyectopps",
+    "miproyectopps": "miproyectopps"
+  },
+  "targets": {
+    "miproyectopps": {
+      "hosting": {
+        "app": [
+          "miproyectopps"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

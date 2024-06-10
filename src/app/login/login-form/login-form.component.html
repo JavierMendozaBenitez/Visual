@@ -1,0 +1,33 @@
+<ion-card class="a">
+  <ion-card-content>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <ion-input label="Correo electrónico" labelPlacement="floating" fill="outline" type="email" inputmode="email"
+        placeholder="j.perez@sistemas-utnfra.com.ar" errorText="Ingrese un correo válido" formControlName="email"
+        class="ion-margin-bottom"></ion-input>
+      <br>
+      <ion-input label="Contraseña" labelPlacement="floating" fill="outline" type="password" inputmode="text"
+        errorText="Ingrese una contraseña" formControlName="password" class="ion-margin-bottom"></ion-input>
+
+      <ion-button type="submit" class="ghost-round full-width" [disabled]="form.invalid" size="large">
+        Iniciar sesión
+        <ion-icon slot="end" name="log-in-outline"></ion-icon>
+      </ion-button>
+      <br><br>
+      <ion-fab-button id="btnAdmin" class="ghost-round full-width" (click)="fill(0)">
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        Administrador
+      </ion-fab-button>
+      <br><br>
+      <ion-checkbox id="btnMal" class="ghost-round full-width" (click)="fill(1)">
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        Invitado
+      </ion-checkbox>
+      <br><br>
+      <ion-toggle id="btnUsuario" class="ghost-round full-width" (click)="fill(2)">
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        Usuario
+      </ion-toggle>
+      <br>
+    </form>
+  </ion-card-content>
+</ion-card>
